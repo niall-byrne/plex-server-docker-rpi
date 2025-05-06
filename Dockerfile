@@ -10,7 +10,8 @@ ENV DEBIAN_FRONTEND="noninteractive" \
   PLEX_TRANSCODE_DIR=/transcode
 
 RUN apt-get update \
-  && apt-get install -y wget ca-certificates
+  && apt-get install -y wget ca-certificates \
+  && rm -rf /var/cache/apt/archives /var/lib/apt/lists/*
 
 COPY VERSION .
 COPY scripts/plex-url.sh .
