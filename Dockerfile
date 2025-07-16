@@ -1,4 +1,4 @@
-FROM debian:buster-slim AS src
+FROM debian:bookworm-slim AS src
 
 ARG TARGETARCH
 
